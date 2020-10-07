@@ -8,7 +8,7 @@ typedef struct Node{
 }Node;
 
 void insert(NodePointer pre, int value);
-int delete(NodePointer tra, NodePointer del);
+int Delete(NodePointer tra, NodePointer del);
 int search(int key);
 
 NodePointer head = NULL;
@@ -26,7 +26,7 @@ void insert(NodePointer pre, int value){
 }
 
 
-int delete(NodePointer tra, NodePointer del){
+int Delete(NodePointer tra, NodePointer del){
     
     if(!head) return  printf("List is Empty!\n");
     else{

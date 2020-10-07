@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 void insert(int* ptr ,int index ,int value);
-int delete(int *ptr, int index);
+int Delete(int *ptr, int index);
 int search(int *ptr, int value);
 
 int main(){
@@ -15,7 +15,7 @@ void insert(int* ptr ,int index ,int value){
 }
 
 
-int delete(int *ptr, int index){
+int Delete(int *ptr, int index){
     int item = ptr[index];
     for (int i = index; i<9; i++) ptr[i] = ptr[i+1];
     ptr[9] = 0;
