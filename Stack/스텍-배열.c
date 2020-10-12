@@ -4,7 +4,7 @@
 int top = -1;
 
 void push(int* arr ,int value);
-void pop(int *arr);
+int pop(int *arr);
 int isFull(void);
 int isEmpty(void);
 
@@ -19,9 +19,13 @@ void push(int* arr ,int value){
     else arr[++top] = value;
 }
 
-void pop(int *arr){
-    if(isEmpty()) printf("the stack is Enpty\n");
-    else arr[top--] = 0;
+int pop(int *arr){
+    if(isEmpty()) return printf("the stack is Enpty\n");
+    else {
+        int item = arr[top];
+        arr[top--] = 0;
+        return item
+    }
 }
 
 int isFull(){
