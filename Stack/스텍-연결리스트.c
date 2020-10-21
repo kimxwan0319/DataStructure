@@ -39,7 +39,7 @@ int pop(){
     }
 }
 
-int isEmpty(void){
+int isEmpty(){
     if(!top) return 1;
     else return 0;
 }
