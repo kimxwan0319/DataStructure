@@ -6,19 +6,19 @@ int main(void){
     scanf("%d",&n);
     int *arr = (int*)malloc(sizeof(int)*n);
     int q,w;
-    int temp;
+    int swap;
     
     for(q=0; q<n; q++)
         scanf("%d",&arr[q]);
     
-    for(q=1; q<n; q++){
-        temp = arr[q];
-        
-        for(w=q; w>0 && arr[w-1]>temp; w--){
-            arr[w] = arr[w-1];
+    for(q=n-1; q>0; q--){
+        for(w=0; w<q; w++){
+            if(arr[w]>arr[w+1]){
+                swap = arr[w];
+                arr[w] = arr[w+1];
+                arr[w+1] = swap;
+            }
         }
-            
-        arr[w] = temp;
     }
     
     for(q=0; q<n; q++)
